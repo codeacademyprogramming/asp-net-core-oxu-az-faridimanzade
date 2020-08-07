@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/8e780d0fb0.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="~/css/style.css">
+
+    <title>@ViewData["Title"] - Aərbaycan Xəbərləri</title>
+</head>
+<body>
+
+
+    <div class="free-area"></div>
+
+    <!-- ======================================================= HEADER -->
+
+    <header>
+        <div class="head-main-container">
+            <div class="head-center-container">
+                <div class="brand-logo-menu">
+                    <i class="fas fa-bars"></i>
+                    <a href="index.html">oxu.az</a>
+                    <div class="toggle-menu">
+                        <i class="fas fa-bars"></i>
+                        <p>Kateqoriyalar</p>
+                    </div>
+                </div>
+                <div class="header-options">
+                    <div class="header-info">
+                        <a href="#">Haqqimizda</a>
+                        <a href="#">Reklam</a>
+                    </div>
+                    <div class="social-contact">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-android"></i></a>
+                        <a href="#"><i class="fab fa-apple"></i></a>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Axtarış">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="localization-bar">
+                        <a href="#">RU</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ======================================================= HEADER -->
+    <!-- ======================================================= NAVBAR LARGE SCREEN -->
+    <nav>
+        <div class="nav-main-container">
+            <div class="nav-row">
+                <div class="nav-container-center">
+                    <ul>
+                        <li><a href="#" class="selected-nav-section">Baş səhifə</a></li>
+                        <li><a href="#">Siyasət</a></li>
+                        <li><a href="#">İqtisadiyyat</a></li>
+                        <li><a href="#">Cəmiyyət</a></li>
+                        <li><a href="#">Şou-biznes</a></li>
+                        <li><a href="#">Müharibə</a></li>
+                        <li><a href="#">İdman</a></li>
+                        <li><a href="#">Kriminal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-row">
+                <div class="nav-container-center">
+                    <ul>
+                        <li><a href="#">Mədəniyyət</a></li>
+                        <li><a href="#">Dünya</a></li>
+                        <li><a href="#">Avto-Moto</a></li>
+                        <li><a href="#">İKT</a></li>
+                        <li><a href="#">Turizm</a></li>
+                        <li><a href="#">Maraqlı</a></li>
+                        <li><a href="#">Müsahibə</a></li>
+                        <li><a href="#">Baku TV</a></li>
+                        <li><a href="#">CinemaPlus</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-row">
+                <div class="nav-container-center">
+                    <ul>
+                        <li><a href="#">Azərbaycanda koronavirusla bağlı xəbərlər</a></li>
+                        <li><a href="#">Koronavirus Onlayn Statistika</a></li>
+                        <li><a href="#">Bütün xəbərlər</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- ======================================================= NAVBAR LARGE SCREEN -->
+    <!-- ======================================================= MOBILE NAVBAR -->
+    <div class="mobile-navbar-container">
+        <ul>
+            <li><a href="#" ">Baş səhifə</a></li>
+            <li><a href=" #">Siyasət</a></li>
+            <li><a href="#">İqtisadiyyat</a></li>
+            <li><a href="#">Cəmiyyət</a></li>
+            <li><a href="#">Şou-biznes</a></li>
+            <li><a href="#">Müharibə</a></li>
+            <li><a href="#">İdman</a></li>
+            <li><a href="#">Kriminal</a></li>
+            <li><a href="#">Mədəniyyət</a></li>
+            <li><a href="#">Dünya</a></li>
+            <li><a href="#">Avto-Moto</a></li>
+            <li><a href="#">İKT</a></li>
+            <li><a href="#">Turizm</a></li>
+            <li><a href="#">Maraqlı</a></li>
+            <li><a href="#">Müsahibə</a></li>
+            <li><a href="#">Baku TV</a></li>
+            <li><a href="#">CinemaPlus</a></li>
+        </ul>
+    </div>
+    <!-- ======================================================= MOBILE NAVBAR -->
+
+
+    @RenderBody()
+
+
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/script.js"></script>
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>
