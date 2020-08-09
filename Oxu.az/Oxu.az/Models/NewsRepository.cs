@@ -105,8 +105,11 @@ namespace Oxu.az.Models
 
         }
 
+        //================================ EDIT POST
         public bool EditPost(EditNewsViewModel news)
         {
+            var post = _context.News.FirstOrDefault(x => x.id == news.id);
+
             if (news.FormFile != null)
             {
                 var nameOfImage = Path.GetFileNameWithoutExtension(news.FormFile.FileName);
@@ -125,13 +128,12 @@ namespace Oxu.az.Models
 
                 news.FileName = newFileName;
 
+
+                var previousFileName = post.FileName;
+                var deleteImage = Path.Combine(_webHost.WebRootPath, "images", "PostsGallery", previousFileName);
+                File.Delete(deleteImage);
             }
 
-            var post = _context.News.FirstOrDefault(x=>x.id == news.id);
-
-            var previousFileName = post.FileName;
-            var deleteImage = Path.Combine(_webHost.WebRootPath, "images", "PostsGallery", previousFileName);
-            File.Delete(deleteImage);
 
             post.FileName = news.FileName;
             post.Title = news.Title;
@@ -142,6 +144,37 @@ namespace Oxu.az.Models
                 return true;
             }
             return false;
+        }
+
+
+        //================ INCREASE LIKE DISLIKE AND VISITED AMOUNT
+        public News IncreasePostAffect(PostAffect postAffect)
+        {
+            var post = _context.News.FirstOrDefault(x => x.Title == postAffect.PostTitle);
+
+            if (postAffect.Category == 1)
+            {
+                post.LikeAmount++;
+            }
+            else if (postAffect.Category == 2)
+            {
+                post.DislikeAmount++;
+            }
+            else
+            {
+                post.VisitedAmount++;
+            }
+
+            var result = _context.SaveChanges();
+
+            if (result > 0)
+            {
+                return post;
+            }
+            else
+            {
+                return post;
+            }
         }
     }
 }

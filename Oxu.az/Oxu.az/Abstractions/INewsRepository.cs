@@ -18,5 +18,7 @@ namespace Oxu.az.Abstractions
         public bool DeletePost(int id);
 
         public bool EditPost(EditNewsViewModel news);
+
+        public News IncreasePostAffect(PostAffect postAffect);
     }
 }
